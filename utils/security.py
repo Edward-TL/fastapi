@@ -76,9 +76,9 @@ def check_jwt_token(token:str = Depends(oauth_schema)):
                 return final_checks(username, role)
     except Exception as e:
 
-        raise HTTPException(status_code=HTTP_401_UNAUTHORIZED)
+        return False
         
-    raise HTTPException(status_code=HTTP_401_UNAUTHORIZED)
+    return False
 
 # Last checking and returning the final result
 def final_checks(username:str, role:str):
