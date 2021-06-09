@@ -1,11 +1,11 @@
-from fastapi import FastAPI, Body, Header, File
+from fastapi import FastAPI, Body, Header, File, APIRouter
 from models.user import User
 from models.author import Author
 from models.book import Book
 from starlette.status import HTTP_201_CREATED
 from starlette.responses import Response 
 
-app_v1 = FastAPI(root_path="/v1")
+app_v1 = APIRouter()
 
 @app_v1.get("/user", tags=['user'])
 async def get_user_validation(password:str):
