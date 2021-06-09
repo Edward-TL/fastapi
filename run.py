@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Body, Header, File
 from routes.v1 import app_v1
 from routes.v2 import app_v2
+from passlib.context import CryptContext
+
 
 app = FastAPI()
 
