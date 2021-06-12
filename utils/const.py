@@ -4,15 +4,20 @@ JWT_ALGORITHM = "HS256"
 # One mont of expiration = minutes_hour * hours_day * n_days
 JWT_EXPIRATION_TIME_MINUTES =  60 * 24 * 30
 
+# DESCRIPTIONS FOR DOCUMENTATION
 API_DESCRIPTION = f"""It's done from an Udemy's course: Complete Backend (API) Development with Python A-Z
 
 Teacher: Mehmet Nuri Yumuşak
 
 Made by: Edward TL
 """
-
 API_TITLE = "Bookstore from Udemy's course"
-
 DESCRIPTION_TOKEN = "It checks the username and pasword. If they are true, it returns JWT token to you"
-
 ISBN_DESCRIPTION = "It is an unique identifier for books"
+
+# DATABASE
+DB_HOST = "165.232.142.214"
+DB_USER = "admin"
+DB_PASSWORD = "secret_password123"
+DB_NAME = "bookstore"
+DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"

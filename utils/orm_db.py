@@ -1,12 +1,7 @@
 from sqlalchemy import MetaData, create_engine, Table, Column, Integer, Text, ARRAY
 from databases import Database
+from utils.const import DB_URL
 import asyncio
-
-DB_HOST = "165.232.142.214"
-DB_USER = "admin"
-DB_PASSWORD = "secret_password123"
-DB_NAME = "bookstore"
-DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 
 
 async def connect_db():

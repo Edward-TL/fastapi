@@ -1,14 +1,8 @@
 from databases import Database
 import asyncio
-from orm_db import authors, books
+from utils.orm_db import authors, books
 from sqlalchemy import select
-
-DB_HOST = "165.232.142.214"
-DB_USER = "admin"
-DB_PASSWORD = "secret_password123"
-DB_NAME = "bookstore"
-DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
-
+from utils.const import DB_URL
 
 async def connect_db():
     db = Database(DB_URL)
