@@ -1,0 +1,4 @@
+asyncpg
+databases
+FastAPI
+uvicorn
